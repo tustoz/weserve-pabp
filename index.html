@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeServe | Maxi Aditya Kusuma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+
+  </head>
+
+  <body class="bg-[#F1F4F5] font-['Poppins']">
+    <nav class="flex flex-row max-w-7xl mx-auto justify-between items-center mt-6 pb-12"
+    >
+      <img src="assets/logo.svg" alt="Brand Logo" width="176" height="42" />
+      <ul class="flex flex-row gap-x-7">
+        <li>
+          <a
+            href="#products"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#ecosystem"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Ecosystem</a
+          >
+        </li>
+        <li>
+          <a
+            href="#showcases"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Showcases</a
+          >
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Faq</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact-us"
+            class="text-base text-indigo-950 hover:font-semibold hover:text-violet-700"
+            >Contact us</a
+          >
+        </li>
+      </ul>
+      <div class="flex flex-row gap-x-4">
+        <div class="bg-white rounded-full flex items-center p-3">
+          <a href="">
+            <img src="assets/bag.svg" alt="Shopping Bag">
+          </a>
+        </div>
+        <a
+          href="#"
+          class="bg-indigo-950 text-white px-8 py-3 rounded-full font-semibold hover:bg-violet-700"
+          >Sign In</a
+        >
+      </div>
+    </nav>
+
+    <section class="hero max-w-6xl mx-auto py-12 px-5">
+      <div class="flex flex-col gap-y-10 md:flex-row items-center justify-between">
+        <div class="flex flex-col gap-y-10 md:basis-2/4 lg:basis-3/6">
+          <div
+            class="px-3 py-2 small-badge flex flex-row bg-white rounded-full gap-x-2 w-fit items-center"
+          >
+            <img src="assets/world.svg" alt="World Icon" />
+            <p class="text-sm font-semibold text-indigo-950">
+              We host more than 120,000 websites
+            </p>
+          </div>
+          <div class="flex flex-col gap-y-2">
+            <h1
+              class="text-indigo-950 font-['Clash_Display'] text-6xl leading-none"
+            >
+              Grow Online<br />
+              Business Faster.
+            </h1>
+            <p class="text-md lg:text-base leading-loose text-gray-500">
+              We provide a variety of servers to grow your users<br />acquisition
+              much user-friendly and boosting up sales.
+            </p>
+          </div>
+          <div class="text-center flex flex-col gap-y-8 lg:flex-row items-center gap-x-4">
+            <a
+              href="#"
+              class="w-full lg:w-fit text-lg hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-full font-semibold px-8"
+            >
+              Try Free Trial
+            </a>
+            <div class="flex flex-row gap-x-2">
+              <img src="assets/chat.svg" alt="Chat Icon">
+              <a href="#" class="text-base text-violet-700 font-semibold"
+                >Schedule a Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row items-center">
+          <img
+            src="assets/illustration_hero.png"
+            alt="Illustration Hero"
+            class="h-[397px] lg:h-[550px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="features max-w-6xl mx-auto py-12" id="services">
+      <h3
+        class="text-indigo-950 font-['Clash_Display'] text-5xl text-center mb-12"
+      >
+        Your Best Choice
+      </h3>
+      <div class="grid grid-cols-4 gap-x-8 text-start">
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/connectivity.svg" alt="Connectivity Icon" width="47" height="46">
+          <div class="flex flex-col gap-y-1">
+            <h3 class="text-xl font-bold text-black">Extra Layers</h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              Making your project more<br />secure avoiding DDoS
+            </p>
+          </div>
+          <a class="font-semibold text-base text-violet-700">Learn More</a>
+        </div>
+
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/customizable.svg" alt="Customizable Icon" width="47" height="46">
+          <div class="flex flex-col gap-y-1">
+            <h3 class="text-xl font-bold text-black">Customizable</h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              Only install what your<br />business needs to grow
+            </p>
+          </div>
+          <a class="font-semibold text-base text-violet-700">Learn More</a>
+        </div>
+
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/automation.svg" alt="AI Automation Icon" width="47" height="46">
+          <div class="flex flex-col gap-y-1">
+            <h3 class="text-xl font-bold text-black hover:text-white">
+              AI Automation
+            </h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              Decide the business flow<br />based on latest reports
+            </p>
+          </div>
+          <a class="font-semibold text-base text-violet-700 hover:text-white"
+            >Learn More</a
+          >
+        </div>
+
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/autoscaling.svg" alt="Auto-Scaling Icon" width="47" height="46">
+          <div class="flex flex-col gap-y-1">
+            <h3 class="text-xl font-bold text-black">Auto-Scaling</h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              Have a long weekend<br />without worrying any loss
+            </p>
+          </div>
+          <a class="font-semibold text-base text-violet-700">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits max-w-6xl mx-auto py-12" id="ecosystem">
+      <div class="flex flex-row items-center gap-x-24">
+        <div class="flex flex-row items-center">
+          <img
+            src="assets/illustration_benefits.png"
+            alt="Illustration Benefits"
+            class="h-[550px]"
+          />
+        </div>
+        <div class="flex flex-col gap-y-10">
+          <div class="flex flex-col gap-y-2">
+            <h1
+              class="text-indigo-950 font-['Clash_Display'] text-5xl leading-tight"
+            >
+              We Have Very<br />Strong Ecosystem
+            </h1>
+            <p class="text-base font-medium leading-loose text-gray-500 mb-10">
+              We provide a variety of servers to grow your users<br />acquisition
+              much user-friendly and boosting up sales.
+            </p>
+
+            <div class="flex flex-col gap-y-5">
+              <div class="flex flex-col py-5 bg-white rounded-2xl gap-y-1">
+                <div class="flex flex-row px-5 items-center gap-x-3">
+                  <img src="assets/stats.svg" alt="Company Statistics Icon">
+                  <div class="flex flex-col gap-x-2">
+                    <h3 class="font-bold text-xl">$880 Mio</h3>
+                    <p class="text-base font-medium text-[#5D5D7C]">
+                      Company budget saved
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col py-5 bg-white rounded-2xl gap-y-1">
+                <div class="flex flex-row px-5 items-center gap-x-3">
+                  <img src="assets/servers.svg" alt="Servers Icon">
+
+                  <div class="flex flex-col gap-x-2">
+                    <h3 class="font-bold text-xl">450,392</h3>
+                    <p class="text-base font-medium text-[#5D5D7C]">
+                      All servers available
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col py-5 bg-white rounded-2xl gap-y-1">
+                <div class="flex flex-row px-5 items-center gap-x-3">
+                  <img src="assets/websites.svg" alt="Websites Icon">
+                  <div class="flex flex-col gap-x-2">
+                    <h3 class="font-bold text-xl">189 Mio</h3>
+                    <p class="text-base font-medium text-[#5D5D7C]">
+                      Websites are running good
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row items-center gap-x-4">
+            <a
+              href="#"
+              class="text-base hover:bg-indigo-950 bg-violet-700 text-white py-4 rounded-full font-semibold px-8"
+            >
+              Explore More
+            </a>
+            <div class="flex flex-row gap-x-2">
+              <img src="assets/chat.svg" alt="Chat Icon">
+
+              <a href="#" class="text-base text-violet-700 font-semibold"
+                >Schedule a Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcases mx-auto py-16" id="showcases">
+      <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-2 text-center">
+          <h1 class="text-indigo-950 font-['Clash_Display'] text-5xl">
+            Our Showcase
+          </h1>
+          <p class="text-base font-medium leading-loose text-gray-500">
+            They built amazing website to help more people around the world<br />by
+            using our recommendation services and products
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-2 justify-center">
+          <div class="group relative">
+            <div
+              class="group-hover:opacity-100 transition-all ease-in-out duration-150 opacity-0 absolute flex justify-center w-full bottom-8"
+            >
+              <a
+                href="#"
+                class="hover:bg-indigo-950 transition-all ease-in-out duration-150 bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700"
+                >View Details</a
+              >
+            </div>
+            <img
+              src="assets/project1.png"
+              class="w-[320px] h-[220px] transition-all ease-in-out duration-150 rounded-2xl group-hover:border-4 border-violet-700"
+            />
+          </div>
+          <div class="group relative">
+            <div
+              class="group-hover:opacity-100 transition-all ease-in-out duration-150 opacity-0 absolute flex justify-center w-full bottom-8"
+            >
+              <a
+                href="#"
+                class="hover:bg-indigo-950 transition-all ease-in-out duration-150 bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700"
+                >View Details</a
+              >
+            </div>
+            <img
+              src="assets/project2.png"
+              class="w-[320px] h-[220px] transition-all ease-in-out duration-150 rounded-2xl group-hover:border-4 border-violet-700"
+            />
+          </div>
+          <div class="group relative">
+            <div
+              class="group-hover:opacity-100 transition-all ease-in-out duration-150 opacity-0 absolute flex justify-center w-full bottom-8"
+            >
+              <a
+                href="#"
+                class="hover:bg-indigo-950 transition-all ease-in-out duration-150 bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700"
+                >View Details</a
+              >
+            </div>
+            <img
+              src="assets/project3.png"
+              class="w-[320px] h-[220px] transition-all ease-in-out duration-150 rounded-2xl group-hover:border-4 border-violet-700"
+            />
+          </div>
+          <div class="group relative">
+            <div
+              class="group-hover:opacity-100 transition-all ease-in-out duration-150 opacity-0 absolute flex justify-center w-full bottom-8"
+            >
+              <a
+                href="#"
+                class="hover:bg-indigo-950 transition-all ease-in-out duration-150 bg-violet-700 text-white px-7 py-3 rounded-full shadow-2xl shadow-violet-700"
+                >View Details</a
+              >
+            </div>
+            <img
+              src="assets/project4.png"
+              class="w-[320px] h-[220px] transition-all ease-in-out duration-150 rounded-2xl group-hover:border-4 border-violet-700"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials max-w-6xl mx-auto py-12" id="testimonials">
+      <h3
+        class="text-indigo-950 font-['Clash_Display'] text-5xl text-center mb-12"
+      >
+        Our Testimonials
+      </h3>
+      <div class="grid grid-cols-3 gap-x-8 text-start">
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/avatar1.jpg" alt="Avatar 1" class="rounded-full w-24 h-24 self-center">
+          <div class="flex flex-col gap-y-4 text-center">
+            <h3 class="text-xl font-bold text-black">Adrian Wibowo</h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              “Setting up our hosting used to take hours. With this platform, everything was live in minutes. Fast, reliable, and exactly what our team needed to scale”
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/avatar2.jpg" alt="Avatar 2" class="rounded-full w-24 h-24 self-center">
+          <div class="flex flex-col gap-y-4 text-center">
+            <h3 class="text-xl font-bold text-black">Nadya Prameswari</h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              “The dashboard is incredibly intuitive. I don’t need to involve engineering just to manage deployments anymore. It’s streamlined our workflow a lot”
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="my-card bg-white rounded-2xl flex flex-col gap-y-8 px-5 py-8"
+        >
+          <img src="assets/avatar3.jpg" alt="Avatar 3" class="rounded-full w-24 h-24 self-center">
+          <div class="flex flex-col gap-y-4 text-center">
+            <h3 class="text-xl font-bold text-black hover:text-white">
+              Clarissa Hartono
+            </h3>
+            <p class="text-base leading-relax text-[#5D5D7C]">
+              “Stability and performance were our biggest concerns. Since switching, we’ve had zero downtime and noticeably faster load times”
+            </p>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <section class="faq-wrapper max-w-6xl mx-auto py-12" id="faq">
+      <h1
+        class="text-indigo-950 font-['Clash_Display'] text-5xl text-center mb-10"
+      >
+        Frequently Asked Questions
+      </h1>
+      <div class="grid grid-cols-2 gap-x-8">
+        <div class="parent-cards-faq flex flex-col gap-y-6">
+          <div
+            class="card-faq flex flex-row bg-white rounded-2xl p-5 justify-between items-center"
+          >
+            <h3 href="#" class="text-lg font-bold text-black">
+              Why do we need to use Kapp?
+            </h3>
+
+            <a href="#"
+              >
+              <img src="assets/chevron-down.svg" alt="Chevron Down Icon">
+            </a>
+          </div>
+
+          <div class="card-faq flex flex-row bg-white rounded-2xl p-5 gap-x-10">
+            <div class="flex flex-col gap-y-5">
+              <h3 class="font-bold text-xl">
+                Do we need to pay 6 months per item?
+              </h3>
+              <p class="text-base font-medium leading-loose text-gray-500 max-w-md">
+                Weserve is able to develop by themselve without removing the
+                parents permission and fully run network at 100% avoiding data-loss at any moments
+              </p>
+              <a
+                href="#"
+                class="flex gap-x-2 text-base text-violet-700 font-semibold"
+                >Learn More</a
+              >
+            </div>
+            <a href="#"
+              >
+              <img src="assets/chevron-up.svg" alt="Chevron Up Icon">
+            </a>
+          </div>
+
+          <div
+            class="card-faq flex flex-row bg-white rounded-2xl p-5 justify-between items-center"
+          >
+            <h3 href="#" class="text-lg font-bold text-black">
+              How to migrate from other service?
+            </h3>
+
+            <a href="#"
+              >
+              <img src="assets/chevron-down.svg" alt="Chevron Down Icon">
+            </a>
+          </div>
+        </div>
+
+        <div class="parent-cards-faq flex flex-col gap-y-6">
+          <div class="card-faq flex flex-row bg-white rounded-2xl p-5 gap-x-10">
+            <div class="flex flex-col gap-y-5">
+              <h3 class="font-bold text-xl">
+                What if data doesn’t get stored?
+              </h3>
+              <p class="text-base font-medium leading-loose text-gray-500 max-w-md">
+                Weserve is able to develop by themselve without removing the
+                parents permission and run network at 100% avoiding data-loss
+                at any moments
+              </p>
+            </div>
+            <a href="#"
+              >
+              <img src="assets/chevron-up.svg" alt="Chevron Up Icon">
+            </a>
+          </div>
+
+          <div
+            class="card-faq flex flex-row bg-white rounded-2xl p-5 justify-between items-center"
+          >
+            <h3 href="#" class="text-lg font-bold text-black">
+              Can we guarantee no any loss at all?
+            </h3>
+
+            <a href="#"
+              >
+              <img src="assets/chevron-down.svg" alt="Chevron Down Icon">
+            </a>
+          </div>
+
+          <div
+            class="card-faq flex flex-row bg-[#080C2E] rounded-2xl p-5 justify-between"
+          >
+            <div class="flex flex-row gap-x-2 items-center">
+              <img src="assets/chat-white.svg" alt="Chat White Icon">
+
+              <a href="#" class="text-base text-white font-semibold"
+                >Send e-mail to us for other questions</a
+              >
+            </div>
+
+            <a href="#"
+              ><svg
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="30"
+                  width="30"
+                  height="30"
+                  rx="15"
+                  transform="rotate(-90 0.5 30)"
+                  fill="white"
+                />
+                <path
+                  d="M13.2125 9.05994L18.1025 13.9499C18.68 14.5274 18.68 15.4724 18.1025 16.0499L13.2125 20.9399"
+                  stroke="#080C2E"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing max-w-6xl mx-auto bg-[#640EF1] p-14 rounded-3xl z-20 relative"
+    >
+      <div class="grid grid-cols-2 gap-x-10 items-center">
+        <div class="flex flex-col gap-y-10">
+          <div
+            class="px-3 py-2 small-badge flex flex-row items-center bg-white rounded-full gap-x-2 w-fit"
+          >
+            <img src="assets/world.svg" alt="World Icon">
+            <p class="text-base font-semibold text-indigo-950">
+              We host more than 120,000 websites
+            </p>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <h1
+              class="text-indigo-950 font-['Clash_Display'] text-4xl leading-none text-white"
+            >
+              Start Growing Today
+            </h1>
+            <p class="text-base leading-loose text-white font-medium">
+              We provide a variety of servers to grow your users<br />acquisition
+              much user-friendly and boosting up sales.
+            </p>
+          </div>
+          <div class="flex flex-row gap-x-4">
+            <a
+              href="#"
+              class="text-base hover:bg-white hover:text-violet-700 transition transition-all ease-in-out duration-150 bg-[#FFD15A] w-fit text-black py-4 rounded-full font-semibold px-8"
+            >
+              Explore More
+            </a>
+            <div class="flex flex-row gap-x-2 items-center">
+              <img src="assets/chat-white.svg" alt="Chat Icon">
+
+              <a href="#" class="text-base text-white font-semibold"
+                >Schedule a Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-col gap-y-10">
+          <div class="grid grid-cols-3 gap-x-5 gap-y-5">
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/webcrawl.svg" alt="Web Crawl">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">Web Crawl</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/core.svg" alt="Fast Report Icon">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">Fast Report</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/secure.svg" alt="Secure Icon">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">Anti-DDoS</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/autoscale.svg" alt="Auto Scale Icon">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">Auto Scale</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/ai.svg" alt="Auto Scale Icon">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">AI Perform</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <div
+              class="closing-card-feature gap-y-6 justify-center flex flex-col items-center bg-white p-5 rounded-2xl"
+            >
+              <a href=""
+                >
+                <img src="assets/plugin.svg" alt="Plugin Icon">
+              </a>
+              <div class="flex flex-col gap-y-0 items-center">
+                <p class="text-lg text-black font-bold">Top Plugins</p>
+                <a href="#" class="text-base font-semibold text-gray-500">
+                  Learn More
+                </a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer w-screen -mt-[230px] bg-[#070C29] z-10 relative" id="contact-us">
+      <div class="max-w-6xl mx-auto py-10 grid grid-cols-3 pt-[300px] gap-x-10">
+          <div id="map" class="w-full rounded-xl"></div>
+          <div class="mailform col-span-2 bg-white rounded-xl p-8 flex flex-col shadow-lg h-fit">
+            <div class="space-y-1">
+              <h1 class="text-4xl font-bold text-indigo-950 font-['Clash_Display']">
+                Subscribe for new updates!
+              </h1>
+              <p class="text-slate-700 text-md">
+                Get product updates, feature launches, and tips delivered straight to your inbox.
+              </p>
+            </div>
+
+            <form class="flex flex-col sm:flex-row gap-4 mt-6 mb-2">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email address"
+                class="flex-1 rounded-lg border border-slate-400 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 text-base focus:outline-none focus:ring-2 focus:ring-indigo-700"
+              />
+
+              <button
+                type="submit"
+                class="rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto py-10 grid grid-cols-5 gap-x-10">
+        <div class="company flex flex-col col-span-2 gap-y-7">
+          <img src="assets/logo-white.svg" alt="Logo White Icon" width="175" height="42">
+          <p class="text-base font-medium leading-relax text-gray-500">
+            We host your empire business today<br />using the latest technologies.
+          </p>
+          <div class="flex flex-row gap-x-4">
+            <div class="bg-white rounded-full flex items-center p-3">
+              <a href="">
+                <img src="assets/email.svg" alt="Email Icon">
+              </a>
+            </div>
+            <div class="bg-white rounded-full flex items-center p-3">
+              <a href="">
+                <img src="assets/world-purple.svg" alt="World Purple Icon">
+              </a>
+            </div>
+            <div class="bg-white rounded-full flex items-center p-3">
+              <a href="">
+                <img src="assets/phone.svg" alt="Phone Icon">
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="sitemap flex flex-col gap-y-7">
+          <h1 class="text-lg font-bold text-white">Products</h1>
+          <ul class="flex flex-col gap-y-3">
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Powerful Reports</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Auto-Backup</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Data Science</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Auto-Scaling Up</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="sitemap flex flex-col gap-y-7">
+          <h1 class="text-lg font-bold text-white">Resources</h1>
+          <ul class="flex flex-col gap-y-3">
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Support 24/7</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >How-to Instructions</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Blog & Tips</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="sitemap flex flex-col gap-y-7">
+          <h1 class="text-lg font-bold text-white">Company</h1>
+          <ul class="flex flex-col gap-y-3">
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Privacy and Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Terms and Conditions</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Investor Relations</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Join With Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-base text-gray-500 hover:text-violet-700"
+                >Our Statistics</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const map = L.map("map").setView([-6.200000, 106.816666], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+
+    L.marker([-6.200000, 106.816666])
+      .addTo(map)
+      .bindPopup("Our Business Location")
+      .openPopup();
+  });
+  </script>
+
+  </body>
+</html>
